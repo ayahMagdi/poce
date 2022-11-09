@@ -25,7 +25,7 @@ function App(){
         <Router>
             <div className='app'>
               <Routes>
-                <Route path="https://github.com/ayahMagdi/poce.git" element={<HomePageOne />}></Route>
+                <Route path="poce" element={<HomePageOne />}></Route>
                 <Route path="/home-2" element={<HomePageTwo />}></Route>
                 <Route path="/home-3" element={<HomePageThree />}></Route>
                 <Route path="/home-4" element={<HomePageFour />}></Route>
