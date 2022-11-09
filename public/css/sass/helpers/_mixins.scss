@@ -1,0 +1,12 @@
+@mixin responsive($screen){
+    @media (max-width: $screen){
+       @content;
+    }
+}
+
+@mixin ds-flex($display , $justify , $align , $gap){
+   display: $display;
+   justify-content: $justify;
+   align-items: $align;
+   gap: $gap;
+}

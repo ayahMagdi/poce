@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Norican&family=Poppins:wght@200;300;500;600;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+.main__three{
+    background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/08/slider1-h3.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    @include responsive(767px){
+        padding: 60px 0;
+        height: auto;
+    }
+    .content__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        gap: 50px;
+        @include responsive(767px){height: auto}
+        .content__left{
+            position: relative;
+            width: 50%;
+            text-align: right;
+            @include responsive(767px){display: none;}
+        }
+        .content__right{
+                width: 50%;
+                position: relative;
+                @include responsive(767px){width: 100%;text-align: center;}
+                .alt__title{
+                    font-size: 50px;
+                    font-weight: 900;
+                    margin: 0;
+                    text-shadow: 1px 0 5px #000;
+                    position: relative;
+                    text-transform: capitalize;
+                    color: #FFF;
+                    font-family: "Norican", cursive;
+                    @include responsive(767px){font-size: 40px;}
+                }
+                .title{
+                    margin: 0;
+                    color: #FCC222;
+                    font-size: 6rem;
+                    text-transform: capitalize;
+                    text-shadow: 1px 0 5px #000;
+                    @include responsive(767px){font-size: 55px;}
+                }
+                .description{
+                    color: #FFF;
+                    margin: 20px 0 30px 0;
+                    font-size: 18px;
+                    text-shadow: 1px 0 5px #000;
+                    width: 55%;
+                    line-height: 1.6;
+                    @include responsive(767px){width: 100%;}
+                }
+                button{
+                    background-color: #FFC222;
+                    border: none;
+                    width: 160px;
+                    height: 55px;
+                    border-radius: 6px;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    transition: .5s;
+                    cursor: pointer;
+                    &:hover{
+                        color: #FFF;
+                        background-color: #eeac00;
+                    }
+                }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.popular__dishes{
+    padding: 60px 0;
+    &__list{
+        margin-bottom: 50px;
+        text-align: center;
+        .list__title{
+            font-size: 40px;
+            font-weight: 900;
+            margin: 0;
+            margin-bottom: 30px;
+            color: $blackcolor;
+            @include responsive(767px){font-size: 36px;}
+        }
+        .list__items{
+            @include ds-flex(flex , center , center , 30px);
+            @include responsive(767px){
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .list__item{
+                cursor: pointer;
+                text-transform: uppercase;
+                font-weight: bold;
+                padding: 13px 35px;
+                border: 1px solid #ededed;
+                border-radius: 30px;
+                transition: .5s;
+                &:hover{border-color: #FFC222}
+                &.active{
+                    background-color: #FFC222;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+}

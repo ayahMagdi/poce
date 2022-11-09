@@ -1,0 +1,55 @@
+.information{
+    padding: 80px 0;
+    background-color: #f7f2e2;
+    &__wrapper{
+        @include ds-flex(flex , space-between , center , 30px);
+        @include responsive(767px){flex-wrap: wrap;}
+        .information__box{
+            @include ds-flex(flex , space-between , center , 0);
+            width: calc(100% / 3);
+            background-color: #FFF;
+            padding: 30px 40px; 
+            border-radius: 6px;
+            @include responsive(767px){width: 100%;}
+            &.box__two{
+                background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/09/h1_banner2.jpg);
+                color: #FFF;
+                .info__price{color: $maincolor}
+            }
+            &.box__three{
+                .info__contact{
+                    color: $maincolor;
+                    margin-top: 40px;
+                    font-weight: 900;
+                }
+            }
+            &:hover .box__bg{transform: scale(1.2)}
+            .info{
+                &__title{
+                    font-size: 28px;
+                    margin: 0;
+                }
+                &__description{
+                    font-size: 12px;
+                    margin: 10px 0;
+                    line-height: 1.8;
+                }
+                &__price{
+                    color: $altcolor;
+                    font-weight: 900;
+                    font-size: 18px;
+                }
+            }
+            .image{
+                position: relative;
+                .box__bg{transition: .3s}
+                .box__img{
+                    position: absolute;
+                    top: 50%;
+                    left: 40%;
+                    transform: translate(-50% , -50%);
+                }
+            }
+        }
+    }
+}

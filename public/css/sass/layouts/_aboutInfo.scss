@@ -1,0 +1,98 @@
+.about__info{
+    padding: 90px 0;
+    background-color: #f7f4ef;
+    display: flex;
+    align-items: center;
+    @include responsive(767px){overflow: hidden;}
+    .content__wrapper{
+        display: flex;
+        justify-content: space-between;
+        gap: 15%;
+        width: 100%;
+        height: 100%;
+        @include responsive(767px){
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .content__left{
+            width: 35%;
+            @include responsive(767px){width: 100%;text-align: center;}
+            .alt__title{
+                font-size: 40px;
+                font-weight: normal;
+                margin: 0;
+                text-transform: capitalize;
+                font-family: "Norican", cursive;
+                color: #FCC222;
+                @include responsive(767px){font-size: 30px;}
+            }
+            .title{
+                margin: 0;
+                color: #1E1D23;
+                font-size: 55px;
+                font-weight: 900;
+                @include responsive(767px){font-size: 36px;padding: 0 10px;margin-top: 10px;}
+            }
+            .description{
+                color: #808080;
+                margin: 20px 0 30px 0;
+                line-height: 1.6;
+                @include responsive(767px){margin: 20px 0;}
+            }
+            button{
+                background-color: #FFC222;
+                border: none;
+                width: 160px;
+                height: 55px;
+                border-radius: 6px;
+                font-size: 15px;
+                text-transform: uppercase;
+                font-weight: bold;
+                transition: .5s;
+                cursor: pointer;
+                &:hover{
+                    color: #FFF;
+                    background-color: #eeac00;
+                }
+            }
+        }
+        .content__right{
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            @include responsive(767px){width: 100%;flex-direction: column;}
+            img{
+                border-radius: 8px;
+            }
+            .imgs__left{
+                width: 40%;
+                img{width: 100%;}
+                @include responsive(767px){width: 100%;}
+            }
+            .imgs__right{
+                width: 60%;
+                @include responsive(767px){width: 100%;text-align: center;}
+                img{
+                    &:first-of-type{
+                        margin-bottom: 20px; 
+                        width: 100%;
+                        @include responsive(767px){width: 80%}
+                    }
+                }
+            }
+        }
+    }
+    .imgs__bg{
+        .left{
+            transform: translate(-128%, -200%);
+            z-index: 1
+        }
+        .center{
+            transform: translateY(-100%);
+        }
+        .right{
+            transform: translate(64%, -250%) scale(0.8);
+        }
+    }
+}

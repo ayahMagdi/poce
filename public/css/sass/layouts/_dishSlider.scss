@@ -1,0 +1,21 @@
+.section__wrapper{
+    padding: 90px 0;
+    position: relative;
+    @include responsive(767px){overflow: hidden;}
+    .dish__slider{
+        // background-color: #FFF;
+        @include responsive(767px){overflow: hidden;}
+        .container{
+            padding: 0;
+        }
+    }
+
+    .slick-prev{left: -45px;}
+    .slick-next{right: -34px;}
+    .slick-next:before, .slick-prev:before{font-size: 38px;
+        color: #00000075;}
+   .slick-slider .slick-list, .slick-slider .slick-track{ 
+      display: flex;
+      gap: 20px
+   }
+}

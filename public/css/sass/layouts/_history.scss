@@ -1,0 +1,104 @@
+.history{
+    padding: 0 0 70px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .history__title{
+        color: $blackcolor;
+        text-transform: capitalize;
+        text-align: center;
+        font-size: 42px;
+        margin: 0 0 50px 0;
+    }
+    &__wrapper{
+      display: flex;
+    //   align-items: flex-start;
+      justify-content: space-between;
+      width: 90%;
+      &__works{
+        width: 45%;
+        .history__box{
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            img{width: 100%;border-radius: 20px;}
+            &.box__info{
+                width: 65%;
+                margin: 0 auto;
+                .title{
+                    margin: 0;
+                    font-size: 35px;
+                    text-transform: capitalize;
+                    color: #1E1D23;
+                }
+                .description{
+                    color: #808080;
+                    line-height: 1.6;
+                    /* font-size: 16px; */
+                    margin: 0;
+                    margin-top: 20px;
+                }
+            }
+        }
+      }
+      &__center{
+        width: 10%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .overlay{
+            background: $maincolor;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+            width: 2px;
+        }
+        .history__date{
+          color: $maincolor;
+          font-weight: 900;
+          font-size: 28px;
+          height: 400px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          &::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 41%;
+            height: 2px;
+            background: #FCC222;
+          }
+          &::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #FCC222;
+          }
+          &.history__right{
+             right: -75%;
+             &::before{left: -16%;}
+             &::after{left: -29.5%;}
+          }
+          &.history__left{
+            left: -75%;
+            &::before{right: -16%;}
+            &::after{right: -29.5%;}
+         }
+
+        }
+        
+        
+      }
+    }
+}

@@ -1,0 +1,11 @@
+.our__chefs{
+    padding: 70px 0;
+    .chefs__wrapper{
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        @include responsive(767px){flex-wrap: wrap;justify-content: center;}
+    }
+}
